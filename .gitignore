@@ -15,4 +15,4 @@ target/
 *.DS_Store
 
 # Secret values
-*/BuildVars.java
+*BuildVars.java
