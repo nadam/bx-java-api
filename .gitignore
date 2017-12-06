@@ -13,3 +13,6 @@ target/
 
 # Mac stuff
 *.DS_Store
+
+# Secret values
+*/BuildVars.java
