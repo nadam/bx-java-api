@@ -11,13 +11,14 @@ Features
 - Javadoc
 - Errors automatically turned into exceptions
 
-Example usage
--------------
-
-Public access:
+Using the public API
+--------------------
 
 ```java
-BxApi bx = new BxApi();
+private static BxApi bx = new BxApi();
+```
+
+```java
 Ticker[] tickers = bx.getMarketData();
 for (Ticker ticker : tickers) {
     // ...
@@ -27,10 +28,13 @@ for (Ticker ticker : tickers) {
 Using the private API
 ---------------------
 
-To access the private API you need an account at BX and you need to generate an API key at in your [account area](https://bx.in.th/account/). Make sure you create a key that only has access to the functionality you need and enable 2FA if appropriate.
+To access the private API you need an account at BX and you need to generate an API key at your [account area](https://bx.in.th/account/). Make sure you create a key that only has access to the functionality you need and enable 2FA if appropriate.
 
 ```java
-BxApi bx = new BxApi(YOUR_API_KEY, YOUR_API_SECRET);
+private static BxApi bx = new BxApi(YOUR_API_KEY, YOUR_API_SECRET);
+```
+
+```java
 Balances balances = bx.getBalances(null);
 Balance btcBalance = balances.balance.get("BTC");
 ```
