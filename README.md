@@ -36,7 +36,7 @@ private static BxApi bx = new BxApi(YOUR_API_KEY, YOUR_API_SECRET);
 
 ```java
 Balances balances = bx.getBalances(null);
-Balance btcBalance = balances.balance.get("BTC");
+Balance btcBalance = balances.get("BTC");
 ```
 
 Exception handling
